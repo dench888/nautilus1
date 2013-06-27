@@ -8,6 +8,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'nautilus1.views.home', name='home'),
     # url(r'^nautilus1/', include('nautilus1.foo.urls')),
+    
+     url(r'^$', 'nautilus1.views.index'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
