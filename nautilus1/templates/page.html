@@ -1,11 +1,26 @@
-﻿<!DOCTYPE html>
+{% load i18n %}
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Сайт на django</title>
+	<title>Конкурс фотографий на django</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+	<div class="head">
+		{% if user.is_authenticated %}
+		    Здравствуйте, {{ user.username }}!
+		    <br />
+		    <a href="/logout/">Выход</a>
+		{% else %}
+		    <form action="/login/" method="post">{% csrf_token %}
+		    	Email: <input name="email" />
+		    	Пароль: <input name="password" type="password" />
+		    	<input type="submit" name="login" value="Войти" />
+		    </form>
+		{% endif %}
+	</div>
+	{% include 'includes/messages.html' %}
 	{% block content %}{% endblock %}
 </body>
 </html>

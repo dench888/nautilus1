@@ -10,6 +10,8 @@ urlpatterns = patterns('',
     # url(r'^nautilus1/', include('nautilus1.foo.urls')),
     
     url(r'^$', 'konkurs.views.index'),
+    url(r'^login/$', 'konkurs.views.auth_login'),
+    url(r'^logout/$', 'konkurs.views.auth_logout'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

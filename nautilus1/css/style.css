@@ -1,3 +1,29 @@
 body {
-	color: #d1d3d4;
+}
+
+.head {
+	margin-bottom:20px;
+}
+
+/*	system messages	*/
+ul.messages {
+	margin:10px 0px 10px 0px;
+	padding:0px;
+}
+
+ul.messages li {
+	list-style-type:none;
+	font-weight:bold;
+}
+
+ul.messages li.error {
+	color:#EE0000;
+}
+
+ul.messages li.success {
+	color:#00EE00;
+}
+
+ul.messages li.info {
+	color:#0000EE;
 }
